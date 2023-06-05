@@ -1,105 +1,159 @@
-/* Reset default styles */
-body {
+:root {
+     --selected-color: #009e00;
+   }
+   
+   /* Reset default styles */
+   body {
+     background: #121212;
      margin: 0;
      padding: 0;
      font-family: "Open Sans", Arial, sans-serif;
-}
-
-/* Container styles */
-.container {
-     max-width: 600px;
-     margin: 0 auto;
+   }
+   
+   /* Container styles */
+   .container {
+     max-width: 100%;
      padding: 20px;
      text-align: center;
-}
-
-/* Header styles */
-h1 {
+     box-sizing: border-box;
+   }
+   
+   /* Header styles */
+   h1 {
      font-size: 24px;
      margin-bottom: 20px;
-     color: #333;
-}
-
-.button-container {
+     color: #e0e0e0;
+   }
+   
+   .button-container {
      display: flex;
      justify-content: center;
      margin-bottom: 20px;
-}
-
-.button {
+   }
+   
+   .button {
      display: flex;
      align-items: center;
      justify-content: center;
-     padding: 10px 30px;
+     padding: 16px 24px;
      font-size: 18px;
      text-align: center;
      text-decoration: none;
-     background-color: #007bff;
-     color: #fff;
-     border-radius: 4px;
+     background-color: transparent;
+     border: 2px solid var(--selected-color);
+     border-radius: 5px;
      cursor: pointer;
-     border: none;
-     margin: 0 5px;
-  /* Hover styles */
-  &:hover {
-    background-color: #0056b3;
-  }
-
-  /* Click styles */
-  &:active {
-    background-color: #003c80;
-  }
-}
-
-
-.button i {
+     margin: 0 10px;
+     transition: transform 0.2s, background-color 0.2s;
+   }
+   
+   
+   .button i {
+     color: var(--selected-color);
      display: inline-block;
      vertical-align: middle;
-}
+     transition: transform 0.1s;
+     font-size: 18px;
+   }
 
-/* BPM Display styles */
-.bpm-display {
+   .button:hover {
+     transform: scale(1.1);
+     background-color: #004100;
+   }
+
+   .button:active i {
+     transform: scale(1.2);
+   }
+
+   .button:hover i {
+     color: #18e018;
+   }
+   
+   /* BPM Display styles */
+   .bpm-display {
      margin-bottom: 20px;
      text-align: center;
-}
-
-.bpm-display p {
+   }
+   
+   .bpm-display p {
      font-size: 16px;
-     color: #333;
-}
-
-.bpm-display span {
+     color: #e0e0e0;
+   }
+   
+   .bpm-display span {
      font-size: 20px;
      font-weight: bold;
-     color: #007bff;
-}
-
-/* Table styles */
-.table {
+     color: #009e00;
+   }
+   
+   .bpm-display label {
+     font-size: 16px;
+     color: #e0e0e0;
+     align-items: center;
+   }
+   
+   .bpm-display input {
+     padding: 8px 12px;
+     border: 2px solid #009e00;
+     border-radius: 4px;
+     color: #e0e0e0;
+     align-items: center;
+     background: #121212;
+     font-size: 18px;
+     transition: box-shadow 0.2s;
+   }
+   
+   .bpm-display input:focus {
+     outline: none;
+     box-shadow: 0 0 4px rgba(0, 158, 0, 0.4);
+   }
+   
+   .table {
      width: 100%;
      border-collapse: collapse;
      margin-top: 20px;
-}
-
-/* Table styles */
-.table th,
-.table td {
+     table-layout: fixed;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+   
+   .table th,
+   .table td {
      padding: 10px;
      text-align: center;
      border: 1px solid #ccc;
-     color: #333;
-     width: 25%; /* Update this value to adjust the width of the columns */
-}
+     color: #e0e0e0;
+     word-break: break-word;
+   }
 
-/* Target BPM styles */
-.target-bpm {
+   .table tr:nth-child(even) {
+     background-color: rgba(0, 158, 0, 0.05);
+   }
+   
+   /* Target BPM styles */
+   .target-bpm {
      margin-bottom: 20px;
      font-size: 16px;
-     color: #333;
-}
-
-.target-bpm span {
+     color: #e0e0e0;
+     margin-top: 10px;
+   }
+   
+   .target-bpm span {
      font-size: 20px;
      font-weight: bold;
-     color: #007bff;
-}
+     color: #009e00;
+   }
+   
+   input[type="number"] {
+     font-size: 16px;
+   }
+   
+   input[type="number"]::-webkit-inner-spin-button,
+   input[type="number"]::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+   }
+   
+   input[type="number"]:focus {
+     outline: none;
+   }
+   
