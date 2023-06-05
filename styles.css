@@ -1,159 +1,217 @@
 :root {
-     --selected-color: #009e00;
-   }
-   
-   /* Reset default styles */
-   body {
-     background: #121212;
-     margin: 0;
-     padding: 0;
-     font-family: "Open Sans", Arial, sans-serif;
-   }
-   
-   /* Container styles */
-   .container {
-     max-width: 100%;
-     padding: 20px;
-     text-align: center;
-     box-sizing: border-box;
-   }
-   
-   /* Header styles */
-   h1 {
-     font-size: 24px;
-     margin-bottom: 20px;
-     color: #e0e0e0;
-   }
-   
-   .button-container {
-     display: flex;
-     justify-content: center;
-     margin-bottom: 20px;
-   }
-   
-   .button {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 16px 24px;
-     font-size: 18px;
-     text-align: center;
-     text-decoration: none;
-     background-color: transparent;
-     border: 2px solid var(--selected-color);
-     border-radius: 5px;
-     cursor: pointer;
-     margin: 0 10px;
-     transition: transform 0.2s, background-color 0.2s;
-   }
-   
-   
-   .button i {
-     color: var(--selected-color);
-     display: inline-block;
-     vertical-align: middle;
-     transition: transform 0.1s;
-     font-size: 18px;
-   }
+  --selected-color: #009e00;
+}
 
-   .button:hover {
-     transform: scale(1.1);
-     background-color: #004100;
-   }
+/* Reset default styles */
+body {
+  background: #121212;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+}
 
-   .button:active i {
-     transform: scale(1.2);
-   }
+/* Container styles */
+.container {
+  max-width: 100%;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
 
-   .button:hover i {
-     color: #18e018;
-   }
-   
-   /* BPM Display styles */
-   .bpm-display {
-     margin-bottom: 20px;
-     text-align: center;
-   }
-   
-   .bpm-display p {
-     font-size: 16px;
-     color: #e0e0e0;
-   }
-   
-   .bpm-display span {
-     font-size: 20px;
-     font-weight: bold;
-     color: #009e00;
-   }
-   
-   .bpm-display label {
-     font-size: 16px;
-     color: #e0e0e0;
-     align-items: center;
-   }
-   
-   .bpm-display input {
-     padding: 8px 12px;
-     border: 2px solid #009e00;
-     border-radius: 4px;
-     color: #e0e0e0;
-     align-items: center;
-     background: #121212;
-     font-size: 18px;
-     transition: box-shadow 0.2s;
-   }
-   
-   .bpm-display input:focus {
-     outline: none;
-     box-shadow: 0 0 4px rgba(0, 158, 0, 0.4);
-   }
-   
-   .table {
-     width: 100%;
-     border-collapse: collapse;
-     margin-top: 20px;
-     table-layout: fixed;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   }
-   
-   .table th,
-   .table td {
-     padding: 10px;
-     text-align: center;
-     border: 1px solid #ccc;
-     color: #e0e0e0;
-     word-break: break-word;
-   }
+/* Header styles */
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
 
-   .table tr:nth-child(even) {
-     background-color: rgba(0, 158, 0, 0.05);
-   }
-   
-   /* Target BPM styles */
-   .target-bpm {
-     margin-bottom: 20px;
-     font-size: 16px;
-     color: #e0e0e0;
-     margin-top: 10px;
-   }
-   
-   .target-bpm span {
-     font-size: 20px;
-     font-weight: bold;
-     color: #009e00;
-   }
-   
-   input[type="number"] {
-     font-size: 16px;
-   }
-   
-   input[type="number"]::-webkit-inner-spin-button,
-   input[type="number"]::-webkit-outer-spin-button {
-     -webkit-appearance: none;
-     margin: 0;
-   }
-   
-   input[type="number"]:focus {
-     outline: none;
-   }
+.button-container {
+    margin: 10px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.button i {
+  color: var(--selected-color);
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.1s, border 0.5s;
+  font-size: 20px;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active i {
+  transform: scale(1.2);
+}
+
+.button:focus {
+  outline: none;
+}
+
+
+/* BPM Display styles */
+.bpm-display {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bpm-display p {
+  font-size: 16px;
+  color: #e0e0e0;
+}
+
+.bpm-display span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--selected-color);
+}
+
+.bpm-display label {
+  font-size: 16px;
+  color: #e0e0e0;
+  align-items: center;
+}
+
+.bpm-display input {
+  padding: 16px 24px;
+  margin: 5px;
+  border: 2px solid var(--selected-color);
+  border-radius: 4px;
+  color: #e0e0e0;
+  align-items: center;
+  background: #121212;
+  font-size: 18px;
+  transition: box-shadow 0.1s, transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.bpm-display input:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 158, 0, 0.4);
+  background-color: #1e1e1e;
+}
+
+.bpm-display input:hover {
+  background-color: #1e1e1e;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: center;
+  border: none;
+  color: #e0e0e0;
+  background-color: transparent;
+  word-break: break-word;
+}
+
+.table tr {
+  background-color: #121212;
+  transition: background-color 0.2s;
+}
+
+.table tr:hover {
+  background-color: #1e1e1e;
+}
+
+
+
+/* Target BPM styles */
+.target-bpm {
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #e0e0e0;
+  margin-top: 10px;
+}
+
+.target-bpm span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--selected-color);
+}
+
+input[type="number"] {
+  font-size: 16px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  outline: none;
+}
+
+.target-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.target-container input[type="number"] {
+  width: 40px;
+  text-align: center;
+}
+
+.target-container input[type="number"]:focus {
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  box-shadow: 0 0 4px rgba(0, 158, 0, 0.4);
+}
+
+#colorSelect {
+  display: inline-block;
+    width: auto;
+    margin-right: 10px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 2px solid var(--selected-color);
+  background-color: #121212;
+  color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+#colorSelect:hover {
+  background-color: #252525;
+}
+
+#colorSelect option {
+  background-color: #121212;
+  color: #e0e0e0;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+#colorSelect:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 158, 0, 0.4);
+  background-color: #252525;
+}
+
    
