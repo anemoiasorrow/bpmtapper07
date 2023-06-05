@@ -93,9 +93,20 @@ function convertTableToCSV(table) {
 }
 
 function generateTargetBPM() {
-  const targetBPMElement = document.getElementById("targetBPM");
-  const minBPM = 30;
-  const maxBPM = 180;
-  targetBPM = Math.floor(Math.random() * (maxBPM - minBPM + 1)) + minBPM;
-  targetBPMElement.textContent = targetBPM;
+  const targetBPMInput = document.getElementById("targetBPM");
+  const randomBPM = Math.floor(Math.random() * (180 - 30 + 1)) + 30;
+  targetBPMInput.value = randomBPM;
 }
+
+function updateTargetBPM() {
+  const targetBPMInput = document.getElementById("targetBPM");
+  const targetBPM = targetBPMInput.value;
+  // Use the targetBPM value as needed
+}
+
+// Add an event listener to update the targetBPM when the input value changes
+document.getElementById("targetBPM").addEventListener("input", updateTargetBPM);
+
+const darkModeToggle = document.getElementById("darkModeToggle");
+darkModeToggle.addEventListener("click", toggleDarkMode);
+
