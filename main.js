@@ -110,3 +110,12 @@ document.getElementById("targetBPM").addEventListener("input", updateTargetBPM);
 const darkModeToggle = document.getElementById("darkModeToggle");
 darkModeToggle.addEventListener("click", toggleDarkMode);
 
+// Function to change the selected color based on the dropdown selection
+function changeSelectedColor() {
+  const colorSelect = document.getElementById("colorSelect");
+  const selectedColor = colorSelect.value;
+
+  // Update the CSS variable with the selected color
+  document.documentElement.style.setProperty("--selected-color", selectedColor);
+}
+
